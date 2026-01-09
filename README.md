@@ -19,3 +19,8 @@ class Task:
     id: str
     status: str
 ```
+
+ref :
+- https://www.docstring.fr/glossaire/dataclasses/ --> Docstring.fr
+- https://www.datacamp.com/fr/tutorial/python-data-classes --> Datacamp.com
+- https://docs.python.org/3/library/dataclasses.html --> Documentation python
