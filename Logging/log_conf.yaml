@@ -1,0 +1,30 @@
+version: 1
+
+formatters:
+  standard:
+    format: "%(asctime)s | %(levelname)s | %(name)s | %(message)s"
+
+handlers:
+  console:
+    class: logging.StreamHandler
+    level: INFO
+    formatter: standard
+    stream: ext://sys.stdout
+
+  file_errors:
+    class: logging.FileHandler
+    level: ERROR
+    formatter: standard
+    filename: logs/errors.log
+    encoding: utf-8
+
+  file_infos:
+    class: logging.FileHandler
+    level: DEBUG
+    formatter: standard
+    filename: logs/infos.log
+    encoding: utf-8
+
+root:
+  level: INFO
+  handlers: [console, file_errors, file_infos]
